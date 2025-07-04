@@ -1,40 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Blog Viewer
+
+This is a simple blog viewer built with [Next.js](https://nextjs.org). It allows users to browse a list of blog posts and view details for each post. The project demonstrates basic usage of Next.js pages, components, and testing with Jest and React Testing Library.
+
+## Features
+
+- View a list of blog posts
+- Click a post to see its details
+- Simple, clean UI
+- Unit tests for components
 
 ## Getting Started
 
-First, run the development server:
+### Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### API Endpoint
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can fetch blog posts from the API endpoint:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```
+http://localhost:3000/api/posts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Testing
+
+To run unit tests:
+
+```bash
+npx jest
+```
+
+> **Note:** If you encounter issues with Babel and Next.js, see the comments in `jest.config.js` and the project documentation for how to run tests and the app without conflicts.
+
+## Project Structure
+
+- `pages/` - Next.js pages (`index.js`, `posts.js`)
+- `components/` - React components (`PostList.jsx`, `PostDetail.jsx`)
+- `__tests__/` - Unit tests for components
+- `jest.config.js` - Jest configuration
+- `babel.config.js` - Babel config for Jest (see notes above)
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn-pages-router)
+- [Jest Documentation](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
